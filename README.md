@@ -1,6 +1,6 @@
-# Bee Label Maker #
+# Natural SQL #
 
-This is image annotation software built using scalatra with a connection to Postgres/H2 db with Slick and serving up a react/redux web front end.
+This is an implementation of an NLI for SQL.
 
 ## Initial Setup
 
@@ -9,7 +9,7 @@ https://github.com/smatt989/bee/wiki/Initial-Setup
 ## Build & Run ##
 
 ```sh
-$ cd bee
+$ cd nsql
 $ ./sbt
 > jetty:start
 > browse
@@ -31,15 +31,15 @@ This command will:
 For development you can have the web server recompile and restart after every code change by using the following code snippit:
 
 ```sh
-$ cd bee
+$ cd nsql
 $ ./sbt
 > ~;jetty:stop;jetty:start
 ```
 
-To develop the front end separately from the backend, start the server the normal way, and separately run the front end on a different port:
+To develop the front ensd separately from the backend, start the server the normal way, and separately run the front end on a different port:
 
 ```sh
-$ cd bee/src/main/webapp/front-end
+$ cd nsql/src/main/webapp/front-end
 $ webpack-dev-server --host 0.0.0.0 --port 9000
 ```
 
