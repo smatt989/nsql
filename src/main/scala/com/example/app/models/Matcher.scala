@@ -16,7 +16,7 @@ object Matcher {
 
     val ravGraphs = ravEdges.map(rav => RAVGraph(rav, attachments))
 
-    ravGraphs.filter(_.isValidMaxFlow)
+    ravGraphs.filter(_.isValidMaxFlow).filter(r => RAVGraph.validMapping(r, lexicon))
   }
 
   // grabs every possible subgraph given tokens

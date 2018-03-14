@@ -8,7 +8,7 @@ trait Element {
 }
 
 case class RelationElement(name: String) extends Element
-case class AttributeElement(name: String, relationElement: RelationElement, isPrimaryKey: Boolean = false) extends Element
+case class AttributeElement(name: String, relationElement: RelationElement, isPrimaryKey: Boolean = false, foreignKeyTo: Option[RelationElement] = None) extends Element
 case class ValueElement(name: String, attributeElement: AttributeElement) extends Element
 
 object Element {
